@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+figure {
+    height: 350px;
+    width: 420px;
+    background-image: linear-gradient(to top, #e12929, #053760, rgb(186, 187, 176));
+    position: relative;
+    border-radius: 2%;
+}
+
+.buttons {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2rem
+}
+
+.buttons_item {
+    background-color: seagreen;
+    color: #ffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition-property: background-color, transform;
+    transition-duration: 2s;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    
+}
+
+.buttons_item:hover {
+    background-color: darkred;
+    transform: scale(1.2);
+
+}
+
+.robots-transformers1 {
+    height: 380px;
+    width: 500px;
+
+}
+
+.robots-transformers3 {
+    height: 350px;
+    width: 350px;
+    left: 6%;
+
+}
+
+
+img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1%;
+    margin: auto;
+    width: 130%;
+    max-width: 400px;
+    transform: scale(.2) rotate(180deg);
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 1s;
+    transition-delay: 1s;
+    transition-timing-function: linear;
+}
+
+img[id]:target {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+
+}
